@@ -11,8 +11,15 @@
     "require": {
         "php": "^8.3",
         "laravel/framework": "^13.17",
-        "laravel/tinker": "^3.0"
+        "laravel/tinker": "^3.0",
+        "webplo/pipeline-test-package": "^1.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/christoper-codes/pipeline-test-package.git"
+        }
+    ],
     "require-dev": {
         "fakerphp/faker": "^1.23",
         "laravel/pail": "^1.2.5",

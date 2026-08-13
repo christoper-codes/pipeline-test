@@ -1,0 +1,40 @@
+name: Update Package
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: 'Composer package to update'
+        required: false
+        default: 'webplo/pipeline-test-package'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer:v2
+
+      - name: Update package
+        run: composer update ${{ inputs.package }} --no-dev --no-interaction --no-progress
+
+      - name: Commit and push if composer.lock changed
+        run: |
+          if ! git diff --quiet -- composer.lock composer.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add composer.lock composer.json
+            git commit -m "chore: update ${{ inputs.package }}"
+            git push origin HEAD:main
+          else
+            echo "No changes after composer update — already on latest matching version."
+          fi
