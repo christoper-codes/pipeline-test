@@ -6001,16 +6001,16 @@
         },
         {
             "name": "webplo/pipeline-test-package",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/christoper-codes/pipeline-test-package.git",
-                "reference": "f00d1c52cbea9c2b87c51ec69ee32ca8283abe10"
+                "reference": "2c95ef67445f5283f54292300c0dddbcd85e773d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/christoper-codes/pipeline-test-package/zipball/f00d1c52cbea9c2b87c51ec69ee32ca8283abe10",
-                "reference": "f00d1c52cbea9c2b87c51ec69ee32ca8283abe10",
+                "url": "https://api.github.com/repos/christoper-codes/pipeline-test-package/zipball/2c95ef67445f5283f54292300c0dddbcd85e773d",
+                "reference": "2c95ef67445f5283f54292300c0dddbcd85e773d",
                 "shasum": ""
             },
             "require": {
@@ -6035,10 +6035,10 @@
             ],
             "description": "Throwaway package used to test the composer-update GitHub Actions pipeline",
             "support": {
-                "source": "https://github.com/christoper-codes/pipeline-test-package/tree/v1.0.0",
+                "source": "https://github.com/christoper-codes/pipeline-test-package/tree/v1.0.1",
                 "issues": "https://github.com/christoper-codes/pipeline-test-package/issues"
             },
-            "time": "2026-08-13T20:39:39+00:00"
+            "time": "2026-08-13T21:13:03+00:00"
         }
     ],
     "packages-dev": [
