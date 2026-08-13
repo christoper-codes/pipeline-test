@@ -12,7 +12,7 @@
         "php": "^8.3",
         "laravel/framework": "^13.17",
         "laravel/tinker": "^3.0",
-        "webplo/pipeline-test-package": "^1.0"
+        "webplo/pipeline-test-package": ">=1.0"
     },
     "repositories": [
         {
